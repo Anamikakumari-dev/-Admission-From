@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Student Admission Form</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #89f7fe, #66a6ff);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      background: white;
+      margin: 50px auto;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 15px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #66a6ff;
+      box-shadow: 0 0 5px rgba(102,166,255,0.5);
+    }
+
+    .gender-group {
+      margin-bottom: 15px;
+    }
+
+    .gender-group input {
+      margin-right: 8px;
+    }
+
+    input[type="file"] {
+      margin-top: 8px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: #66a6ff;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #4a90e2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Student Admission Form</h1>
+    <form>
+      <label>Student Name:</label>
+      <input type="text" name="sname" required>
+
+      <label>Father's Name:</label>
+      <input type="text" name="fname" required>
+
+      <label>Mother's Name:</label>
+      <input type="text" name="mname" required>
+
+      <label>Date of Birth:</label>
+      <input type="date" name="dob" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Contact Number:</label>
+      <input type="text" name="contact" maxlength="10" required>
+
+      <label>Gender:</label>
+      <div class="gender-group">
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+      </div>
+
+      <label>Choose Course:</label>
+      <select name="course" required>
+        <option value="">--- Select Course ---</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="html">HTML</option>
+      </select>
+
+      <label>Address:</label>
+      <textarea name="address" rows="3" required></textarea>
+
+      <label>Upload Photo:</label>
+      <input style="margin-bottom: 30px;" type="file" name="photo" accept="image/*" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>
